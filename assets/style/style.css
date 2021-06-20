@@ -64,6 +64,7 @@ a {
     color: rgba(6, 10, 36, 0.56);
     text-decoration: line-through;
 }
+
 .nav-menumobile-div a:hover {
     color: #00F3BB;
     text-decoration: line-through;
@@ -105,14 +106,15 @@ a {
         padding-right: 10px;
     }
 
-    .nav-menumobile-div{
+    .nav-menumobile-div {
         background-color: #0000EC;
         padding-bottom: 20px;
         padding-top: 20px;
     }
+
     .nav-menumobile-div div {
         text-align: start;
-        
+
         letter-spacing: 0;
         line-height: 28px;
         padding: 15px 20px;
@@ -121,9 +123,9 @@ a {
     .nav-menumobile-div div a {
         font-size: 16px;
         color: #FFFFFF;
-       
+
     }
-    
+
     #hamburguesa:checked~.nav-menumobile-div {
         display: block;
         position: absolute;
@@ -131,7 +133,8 @@ a {
         width: 100%;
         margin-top: 70px;
     }
-    #link:checked ~.nav-menumobile-div{
+
+    #link:checked~.nav-menumobile-div {
         display: none;
     }
 }
@@ -261,6 +264,39 @@ a {
 
 iframe {
     width: 48%;
+    height: 232px;
+}
+
+@media screen and (max-width: 900px) {
+    .fondo_azul {
+
+        height: 65em;
+        clip-path: polygon(0 10%, 100% 5%, 100% 95%, 0% 100%);
+
+    }
+
+    .episodios {
+        padding: 150px 40px;
+
+    }
+
+    .titulo_episodios {
+        font-size: 36px;
+        padding-left: 0px;
+        padding-bottom: 20px;
+    }
+
+    .iframe-container {
+
+        flex-direction: column;
+        padding: 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 160px
+    }
+
 }
 
 /* Sección De donde Venimos */
@@ -300,6 +336,37 @@ iframe {
     line-height: 24px;
 }
 
+@media screen and (max-width: 900px) {
+    .seccion_donde_venimos {
+
+        display: flex;
+        flex-direction: column;
+        margin-top: -100px;
+        margin-left: 0;
+
+    }
+
+    .img_celu {
+        width: 90%;
+    }
+
+    .donde_venimos {
+        width: 80%;
+    }
+
+    .titulo_donde_venimos {
+        margin-top: 10%;
+        ;
+        font-size: 36px;
+        margin-bottom: 4%;
+    }
+
+    .titulo_donde_venimos p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
 /* seccion Invitadas */
 
 .seccion_invitadas {
@@ -324,6 +391,31 @@ iframe {
 
 .img_invitadas img {
     width: 33.3%;
+}
+
+@media screen and (max-width: 900px) {
+
+    .seccion_invitadas {
+        padding-top: 10%;
+        padding-left: 0px;
+
+    }
+
+    .titulo_invitadas {
+        font-size: 36px;
+        padding-left: 40px;
+        margin-bottom: 42px;
+    }
+
+    .img_invitadas {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .img_invitadas img {
+        width: 100%;
+    }
 }
 
 /* Sección Temas */
@@ -369,6 +461,40 @@ iframe {
     letter-spacing: 0;
     text-align: center;
     margin-top: 30px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .seccion_temas {
+        padding: 0 0px;
+
+    }
+
+    .titulo_temas {
+
+        font-size: 36px;
+        padding-top: 10%;
+        padding-bottom: 0;
+        padding-left: 40px;
+    }
+
+    .iconos_temas {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        padding: 0 30%;
+    }
+
+
+    .iconos_temas article img {
+        height: 30%;
+        padding-top: 20%;
+    }
+
+    .iconos_temas article p {
+        margin-top: 10%;
+    }
+
 }
 
 
@@ -422,6 +548,39 @@ iframe {
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 900px) {
+    .fondo_azul_2 {
+        clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
+        height: 25em;
+
+    }
+
+    .novedades {
+        padding-top: 20%;
+       
+    }
+
+    .titulo_novedades {
+        font-size: 36px;
+        width: 80%;
+    }
+
+    .boton_escucha button {
+
+
+
+        width:  288px;
+        height: 48px;
+
+        font-size: 16px;
+
+        line-height: 24px;
+        margin-top: 50px;
+        margin-bottom: 5px;
+    }
+
+}
+
 
 /* Footer */
 
@@ -441,4 +600,23 @@ footer p {
 
 footer i {
     padding-left: 18px;
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7% 0;
+    }
+    footer p {
+        font-size: 14px;
+        line-height: 22px;
+    
+    }
+    footer i {
+        padding: 10px 12px;
+    }
+
 }
