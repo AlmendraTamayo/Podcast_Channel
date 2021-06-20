@@ -54,7 +54,7 @@ a {
     line-height: 28px;
 }
 
-/* Hover en el menú */
+/* Hover en el menú desktop y mobile */
 .nav-menu-ul li a:hover {
     color: #00F3BB;
     text-decoration: line-through;
@@ -64,7 +64,77 @@ a {
     color: rgba(6, 10, 36, 0.56);
     text-decoration: line-through;
 }
+.nav-menumobile-div a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+}
 
+.nav-menumobile-div a:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        padding: 10px;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        /*  justify-content: space-between; */
+    }
+
+    #hamburguesa,
+    .nav-menumobile-div {
+        display: none;
+    }
+
+
+    .icono_h {
+        position: absolute;
+        right: 0;
+        margin-top: 20px;
+        padding-right: 10px;
+    }
+
+    .nav-menumobile-div{
+        background-color: #0000EC;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .nav-menumobile-div div {
+        text-align: start;
+        
+        letter-spacing: 0;
+        line-height: 28px;
+        padding: 15px 20px;
+    }
+
+    .nav-menumobile-div div a {
+        font-size: 16px;
+        color: #FFFFFF;
+       
+    }
+    
+    #hamburguesa:checked~.nav-menumobile-div {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        margin-top: 70px;
+    }
+    #link:checked ~.nav-menumobile-div{
+        display: none;
+    }
+}
 
 /* Sección Hello World */
 .seccion_hello {
@@ -112,12 +182,49 @@ a {
     margin-bottom: 5px;
 }
 
+.bajada_titulo_mob {
+    display: none;
+}
+
 /* Hover boton */
 .boton_conoce button:hover {
     cursor: pointer;
     background-image: linear-gradient(-90deg, #0000fe 0%, #00f0b8 100%);
 }
 
+@media screen and (max-width: 900px) {
+    .seccion_hello {
+        padding-top: 20px;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo_hello {
+        font-size: 36px;
+        width: 70%;
+    }
+
+    .punto_color {
+        color: #060A24;
+    }
+
+    .bajada_titulo {
+        display: none;
+    }
+
+    .bajada_titulo_mob {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .boton_conoce button {
+
+
+        width: 90%;
+
+    }
+}
 
 /* Sección EPISODIOS */
 
