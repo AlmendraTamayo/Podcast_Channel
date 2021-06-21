@@ -74,21 +74,28 @@ a {
 .menu-mobile {
     display: none;
 }
-.logo_podcast_mob{
+
+.logo_podcast_mob {
     display: none;
 }
+
+
 /* Media query mobile (bajo los 900px) */
 @media screen and (max-width: 900px) {
     header {
         padding: 10px 0;
     }
-    .logo_podcast_mob{
+
+
+
+    .logo_podcast_mob {
         height: 36px;
         width: 36px;
         padding: 18px 40px;
         position: absolute;
-        display:block; 
+        display: block;
     }
+
     .nav-menumobile-div div {
         text-align: start;
         background-color: #0000EC;
@@ -105,23 +112,25 @@ a {
 
     .menu-mobile {
         display: block;
-    overflow: hidden;
+        overflow: hidden;
     }
+
     .menu-desktop {
         display: none;
     }
 
-    .menu-mobile label{
+    .menu-mobile label {
         display: flex;
-      flex-direction: row-reverse;
-      margin-top: 20px;
-      padding-right: 20px;
+        flex-direction: row-reverse;
+        margin-top: 20px;
+        padding-right: 20px;
     }
+
     .nav-menumobile-div {
         position: relative;
         transform: translateX(100%);
         transition: all 0.3s ease;
-              padding-bottom: 20px;
+        padding-bottom: 20px;
         padding-top: 20px;
     }
 
@@ -131,12 +140,22 @@ a {
     }
 
     #hamburguesa:checked~.nav-menumobile-div {
-        transform: translateX(0%); 
+        transform: translateX(0%);
         right: 0;
         width: 100%;
     }
 
- 
+    .close {
+        display: none;
+    }
+
+    #hamburguesa:checked~label .close {
+        display: block;
+    }
+
+    #hamburguesa:checked~label .hamb {
+        display: none;
+    }
 }
 
 /* Sección Hello World */
@@ -350,6 +369,7 @@ iframe {
         margin-top: 10%;
         font-size: 36px;
         margin-bottom: 4%;
+        padding-right: 20px;
     }
 
     .titulo_donde_venimos p {
@@ -434,6 +454,7 @@ iframe {
 .iconos_temas article {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .iconos_temas article img {
@@ -452,7 +473,7 @@ iframe {
 
 @media screen and (max-width: 900px) {
     .seccion_temas {
-        padding: 0 0px;
+        padding: 0;
     }
 
     .titulo_temas {
@@ -460,13 +481,14 @@ iframe {
         padding-top: 10%;
         padding-bottom: 0;
         padding-left: 40px;
+        padding-right: 20px;
     }
 
     .iconos_temas {
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
-        padding: 0 30%;
+        padding: 0 20%;
     }
 
 
@@ -538,7 +560,7 @@ iframe {
     }
 
     .novedades {
-        padding-top: 20%;   
+        padding-top: 20%;
     }
 
     .titulo_novedades {
@@ -547,7 +569,7 @@ iframe {
     }
 
     .boton_escucha button {
-        width:  288px;
+        width: 288px;
         height: 48px;
         font-size: 16px;
         line-height: 24px;
@@ -579,16 +601,18 @@ footer i {
 
 /* Media query mobile (bajo los 900px) */
 @media screen and (max-width: 900px) {
-    footer {    
+    footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 7% 0;
     }
+
     footer p {
         font-size: 14px;
         line-height: 22px;
     }
+
     footer i {
         padding: 10px 12px;
     }
