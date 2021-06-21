@@ -35,6 +35,7 @@ a {
     height: 36px;
     width: 36px;
     padding: 18px 0;
+
 }
 
 .nav-menu-ul {
@@ -78,47 +79,64 @@ a {
 .menu-mobile {
     display: none;
 }
-
+.logo_podcast_mob{
+    display: none;
+}
 @media screen and (max-width: 900px) {
     header {
-        padding: 10px;
+        padding: 10px 0;
+    }
+    .logo_podcast_mob{
+        height: 36px;
+        width: 36px;
+        padding: 18px 40px;
+        position: absolute;
+        display:block;
+        
+    }
+    .nav-menumobile-div div {
+        text-align: start;
+        background-color: #0000EC;
+        letter-spacing: 0;
+        line-height: 28px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: flex-start;
     }
 
-    .menu-desktop {
+    #hamburguesa {
         display: none;
     }
 
     .menu-mobile {
-        display: flex;
-        /*  justify-content: space-between; */
+        display: block;
+    overflow: hidden;
     }
-
-    #hamburguesa,
-    .nav-menumobile-div {
+    .menu-desktop {
         display: none;
     }
 
-
-    .icono_h {
-        position: absolute;
-        right: 0;
-        margin-top: 20px;
-        padding-right: 10px;
+    
+    .menu-mobile label{
+        display: flex;
+      flex-direction: row-reverse;
+      margin-top: 20px;
+      padding-right: 20px;
     }
 
+    
+
     .nav-menumobile-div {
-        background-color: #0000EC;
+        position: relative;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        
+        
         padding-bottom: 20px;
         padding-top: 20px;
     }
 
-    .nav-menumobile-div div {
-        text-align: start;
-
-        letter-spacing: 0;
-        line-height: 28px;
-        padding: 15px 20px;
-    }
+    
 
     .nav-menumobile-div div a {
         font-size: 16px;
@@ -127,22 +145,21 @@ a {
     }
 
     #hamburguesa:checked~.nav-menumobile-div {
-        display: block;
-        position: absolute;
+        transform: translateX(0%);
+        
         right: 0;
         width: 100%;
-        margin-top: 70px;
+        /* margin-top: 70px; */
     }
 
-    #link:checked~.nav-menumobile-div {
-        display: none;
-    }
+ 
 }
 
 /* Sección Hello World */
 .seccion_hello {
     padding-left: 100px;
     padding-top: 100px;
+    
 }
 
 .titulo_hello {
@@ -201,6 +218,7 @@ a {
         padding-left: 40px;
         display: flex;
         flex-direction: column;
+        margin-top: -250px;
     }
 
     .titulo_hello {
